@@ -1,3 +1,50 @@
+# CP Studio Fitness 
+
+Landing Page de um studio de pilates. 
+
+# Stacks usadas: 
+- React
+- NodeJs/Express para envio de email
+
+## URL : https://cpfitness.com.br/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

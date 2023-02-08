@@ -22,14 +22,6 @@ export default function SvgsContainer() {
                 <p className='text-white text-[19px] text-center mt-[36px]'>DIMINUA SUAS DORES</p>
             </div> 
             <div className='w-[280px]'>
-                <img src={run} alt="boneco correndo" className='w-[40%] ml-auto mr-auto ' />
-                <p className='text-white text-[19px] text-center mt-[36px]'>AUMENTE CONDICIONAMENTO, FORÇA E MOBILIDADE</p>
-            </div> 
-            <div className='w-[280px]'>
-                <img src={diet} alt="boneco emagrecendo" className='w-[40%] ml-auto mr-auto mt-[5px]' />
-                <p className='text-white text-[19px] text-center mt-[36px]'>EMAGREÇA COM SAÚDE</p>
-            </div> 
-            <div className='w-[280px]'>
                 <img src={agility} alt="boneco exercitando" className='w-[40%] ml-auto mr-auto' />
                 <p className='text-white text-[19px] text-center mt-[36px]'>DESENVOLVA OUTRAS APTIDÕES COMO FLEXIBILIDADE E EQUILÍBRIO</p>
             </div>        

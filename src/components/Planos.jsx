@@ -1,13 +1,11 @@
 import React from 'react'
 import Card from './Card'
-import musculacaoImg from '../assets/MUSCULACAO.png'
 import pilatesImg from '../assets/PILATES.png'
 import bg from '../assets/imgplanos.png'
 import { useState } from 'react'
 import Modal from './Modal/Modal'
 
-export const muscList = ['1x R$270,00', '2x R$380,00', '3x R$540,00', 'Todos os dias: R$670,00']
-export const pilatesList = ['1x R$255,00', '2x R$360,00', '3x R$510,00', 'Todos os dias: R$630,00']
+export const muscList = ['1x R$270,00', '2x R$380,00', '3x R$460,00', 'Todos os dias: R$650,00']
 export const funcionalList = ['R$80,00']
 
 export default function Planos() {

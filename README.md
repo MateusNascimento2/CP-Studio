@@ -3,6 +3,7 @@
 Landing Page de um studio de pilates. 
 
 # Stacks usadas: 
+- Tailwind CSS
 - React
 - NodeJs/Express para envio de email
 

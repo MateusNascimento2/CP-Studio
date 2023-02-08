@@ -1,17 +1,14 @@
 import React from 'react'
-import cardlogo from '../assets/logo3.png'
 import Card from './Card'
-import { cardInfo } from '../Helpers/cardData'
-import funcionalImg from '../assets/FUNCIONAL.png'
-import musculacaoImg from '../assets/MUSCULAÇÃO.png'
+import musculacaoImg from '../assets/MUSCULACAO.png'
 import pilatesImg from '../assets/PILATES.png'
 import bg from '../assets/imgplanos.png'
 import { useState } from 'react'
 import Modal from './Modal/Modal'
 
-export const muscList = ['1', 'B', 'C', 'D']
-export const pilatesList = ['E', 'F', 'G', 'H']
-export const funcionalList = ['I', 'J', 'K', 'L']
+export const muscList = ['1x R$270,00', '2x R$380,00', '3x R$540,00', 'Todos os dias: R$670,00']
+export const pilatesList = ['1x R$255,00', '2x R$360,00', '3x R$510,00', 'Todos os dias: R$630,00']
+export const funcionalList = ['R$80,00']
 
 export default function Planos() {
   const [show, setShow] = useState(false)
@@ -24,13 +21,17 @@ export default function Planos() {
         <h5 className='pb-2 text-[2rem] mb-[2rem] font-semibold italic place-content-center'>Planos</h5>
       </div>
       <div className='flex justify-center gap-10 flex-wrap relative bottom-[170px] z-[5]'>
-        <Card title='Pilates' img={pilatesImg} price='120,00' lists={muscList} />
-        <Card title='Musculação' img={musculacaoImg} price='140,00' lists={pilatesList}/>
-        <Card title='Funcional' img={funcionalImg} price='150,00' lists={funcionalList}/>
+        <Card title='Mensal' img={pilatesImg} lists={muscList} />
       </div>
-      <div className='flex justify-center'>
-        <button onClick={() => setShow(true)} className='bg-yellow-green px-6 py-2 font-bold'>AGENDAR UMA AULA EXPERIMENTAL</button>
-        <Modal onClose={() => setShow(false)} show={show} />
+      <div>
+        <div className='flex justify-center'>
+          <p className='inline underline underline-offset-4 font-bold mb-10 text-center text-[20px]'>Aula avulsa: R$80,00</p>
+        </div>
+        <p className='italic text-center'>Obs: Máximo de 3 alunos por aula.</p>
+        <div className='flex justify-center'>
+          <button onClick={() => setShow(true)} className='bg-yellow-green px-6 py-2 font-bold disabled:opacity-[0.5]' disabled>AGENDAR UMA AULA EXPERIMENTAL</button>
+          <Modal onClose={() => setShow(false)} show={show} />
+        </div>
       </div>
     </div>
   )

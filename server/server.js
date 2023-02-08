@@ -1,18 +1,20 @@
 const express = require('express');
-const cookieParser = require('cookie-parser');
 const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
+
 
 
 const app = express();
-app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
-app.use(cookieParser());
+app.use(bodyParser.json());
+
 
 app.post("/api/sendMail", (req, res) => {
-    let name = req.body.Nome
-    let email = req.body.Email
-    let telephone = req.body.Telefone
-    let toEmail = ["mateusnascar@hotmail.com", "mateusnascar2@gmail.com"]
+    console.log('aqui')
+    let name = req.body.name
+    let email = req.body.email
+    let telephone = req.body.telephone
+    let toEmail = ["mateusnascar2@gmail.com"]
     console.log(name)
     console.log(email)
     console.log(telephone)
@@ -36,7 +38,7 @@ app.post("/api/sendMail", (req, res) => {
                  <li>Nome: ${name}</li>
                  <li>Email: ${email}</li>
                  <li>Telefone: ${telephone}</li>
-                 <ul/>`,
+                 <ul/>`
     }
 
     smtpTransport.sendMail(mailOptions, (error, response) => {

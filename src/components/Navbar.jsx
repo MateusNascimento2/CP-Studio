@@ -30,7 +30,6 @@ export default function Navbar() {
                     <ul className='hidden  md:flex md:text-sm  lg:text-base brightness-150'>
                         <li className='px-4'><a className='hover:text-white italic ' href='#home'>HOME</a></li>
                         <li className='px-4'><a className='hover:text-white italic ' href='#about'>QUEM SOMOS</a></li>
-                        <li className='px-4'><a className='hover:text-white italic'  href='#portfolio'>A INSTRUTORA</a></li>
                         <li className='px-4'><a className='hover:text-white italic'  href='#planos'>PLANOS</a></li>
                     </ul>
                 </div>
@@ -41,7 +40,6 @@ export default function Navbar() {
             <ul className={!nav ? 'md:hidden translate-x-full duration-200' : 'transition ease-in-out duration-300 translate-x-0 absolute bg-darkgray w-full px-8 md:hidden'}>
                 <li className='border-b-2 border-zinc-300 w-full text-white py-4'><a href='#home'>HOME</a></li>
                 <li className='border-b-2 border-zinc-300 w-full text-white py-4'><a href='#about'>QUEM SOMOS</a></li>
-                <li className='border-b-2 border-zinc-300 w-full text-white py-4'><a href='#portfolio'>A INSTRUTORA</a></li>
                 <li className='w-full text-white py-4'><a href='#planos'>PLANOS</a></li>
             </ul>
         </header>

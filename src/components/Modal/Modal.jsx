@@ -8,34 +8,30 @@ import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import logoModal from "../../assets/4.png";
 
+
 export default function Modal(props) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [telephone, setTelephone] = useState('');
     const [loading, setLoading] = useState(false);
 
-    console.log(name)
-    console.log(email)
-    console.log(telephone)
+    
 
     async function handleNewContact(event) {
+        const dataToSubmit = {
+            name,
+            email,
+            telephone,
+        }
         event.preventDefault();
         if (!name || !email || !telephone) {
             return toast.error("Porfavor preencha os campos abaixo.");
         }
         try {
-            let form = new FormData();
-            form.append("Nome", name);
-            form.append("Email", email);
-            form.append("Telefone", telephone);
-            console.log(name)
-            console.log(email)
-            console.log(telephone)
-            
 
             setLoading(true);
             toast.success("Foi enviado.");
-            const resp = await axios.post(`/api/sendMail`, form)
+            const resp = await axios.post(`/api/sendMail`, dataToSubmit)
             setLoading(false);
 
         } catch (err){
@@ -61,10 +57,10 @@ export default function Modal(props) {
                     <h5>VIVA UMA EXPERIÊNCIA CP STUDIO!</h5>
                     <p>
                        A equipe CP Studio logo entrará em contato para agendar a sua aula experimental, 
-                       totalmente sem compromisso. Para isso, basta que você preencha os dados solicitados
+                       totalmente sem compromisso. Para isso, basta que você preencha os dados solicitados.
                     </p>
                 </div>
-                <form id='form' method='POST' action="/api/sendMail" enctype="multipart/form-data">
+                <form id='form' method='POST' action="/api/sendMail" encType="multipart/form-data">
                     <div className='input-container'>
                         <input type="text" value={name} placeholder="Nome" name='name' className='input-class' onChange={event => setName(event.target.value)} />
                         <input type="text" value={email} placeholder="E-mail" name='email' className='input-class' onChange={event => setEmail(event.target.value)}/>
